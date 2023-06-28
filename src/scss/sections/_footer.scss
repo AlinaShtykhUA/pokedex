@@ -1,0 +1,20 @@
+.footer{
+  display: grid;
+  grid-template-columns: 5rem auto 5rem;
+  border-top: .5px solid rgba(255, 255, 255, .2);
+  &__block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg{
+      cursor: pointer;
+      color: #e21b5a;
+      font-size: 2.5rem;
+    }
+  }
+
+  &__menu{
+    border-right: .5px solid rgba(255, 255, 255, .2);
+    border-left: .5px solid rgba(255, 255, 255, .2);
+  }
+}

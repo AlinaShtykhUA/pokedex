@@ -8,7 +8,7 @@ const Footer = () => {
       
       <div className="footer__menu"></div>
 
-      <div className="footer__block">
+      <div className="footer__icon footer__block">
         <MdOutlinePowerSettingsNew/>
       </div>
     </footer>

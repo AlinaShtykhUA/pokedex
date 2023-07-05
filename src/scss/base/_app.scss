@@ -15,11 +15,16 @@
   backdrop-filter: blur(50px);
   border: 1px solid rgba(23, 20, 20, 0.4);
   z-index: 1;
-  .content{
+  
+}
+
+.content{
     margin: 0 5rem;
     height: 80vh;
-    border: .5px solid rgb(255, 255, 255, .2);
+    border: .5px solid rgba(255, 255, 255, .2);
     border-top: 0;
     border-bottom: 0;
+    background-color: rgba(255, 255, 255, .05);
+    overflow: hidden;
+    
   }
-}

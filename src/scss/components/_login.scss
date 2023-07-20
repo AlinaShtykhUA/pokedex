@@ -1,0 +1,58 @@
+:root {
+  --angle: 45deg;
+}
+
+.login{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    border: 5px solid #fff;
+    cursor: pointer;
+    svg{
+      font-size: 3rem;
+    }
+    &:hover{
+      border-radius: 3rem;
+      border-image: conic-gradient(from var(--angle),
+      #d53e33 0deg 90deg,
+      #fbb300 90deg 180deg,
+      #377af5 180deg 270deg,
+      #399953 270deg 360deg
+    )1 stretch;
+    }
+  }
+}
+
+@supports (background: paint(houdini)) {
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+}
+@keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }
+
+  .login__btn {
+    &:hover{
+      animation: rotate 4s linear infinite;
+      border-radius: 3rem;
+    }
+    
+}

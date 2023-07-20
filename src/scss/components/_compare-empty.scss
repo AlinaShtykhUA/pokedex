@@ -1,0 +1,27 @@
+.compare-empty{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+  &__btn{
+    border: none;
+    color: #fff;
+    background: none;
+    font-size: 5rem;
+    cursor: pointer;
+    svg{
+      transition: transform .35s ease-in-out;
+      &:hover{
+        transform: rotate(90deg);
+      }
+    }
+    
+  }
+  &__text{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+  }
+}

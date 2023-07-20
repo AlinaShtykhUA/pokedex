@@ -1,0 +1,119 @@
+.compare-element{
+  height: 100%;
+  display: grid;
+  grid-template-rows: 90% 10%;
+  grid-template-columns: 1fr;
+  &__info{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 40% 60%;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+  }
+
+  &__info-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__info-types{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    max-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 1rem;
+  }
+
+  &__action-btns{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.info-details{
+  &__title{}
+
+  &__img{
+    height: 10rem;
+  }
+}
+
+.info-types{
+  &__type{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 2rem;
+  }
+
+  &__title{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__icons{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  &__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__img{
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+.action-btns{
+  &__btn{
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: rgb(228, 228, 228);
+    border: 1px solid rgba(255, 255, 255, .6);
+    background-color: transparent;
+    cursor: pointer;
+    transition: .35s ease-in-out;
+    &:nth-child(2){
+      border-left: 0;
+      border-right: 0;
+    }
+
+    &:nth-of-type(1){
+      &:hover{
+        background-color: #1f51ff;
+        border-color: #1f51ff;
+      }
+    }
+    &:nth-of-type(2){
+      &:hover{
+        background-color: #27af0f;
+        border-color: #27af0f;
+      }
+    }
+    &:nth-of-type(3){
+      &:hover{
+        background-color: #e21b5a;
+        border-color: #e21b5a;
+      }
+    }
+  }
+}

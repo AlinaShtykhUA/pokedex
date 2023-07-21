@@ -1,0 +1,42 @@
+.about{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgba(255,255,255, .9);
+  text-transform: uppercase;
+  &__title{
+    font-size: 2.5rem;
+    letter-spacing: .5rem;
+  }
+  &__subtitle{
+    font-size: 1rem;
+    max-width: 60%;
+    text-align: center;
+  }
+
+  &__author{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  &__social{
+    display: flex;
+    gap: 1rem;
+    font-size: 2.5rem;
+    .linkedin{
+      color: #0b66c2;
+    }
+    .mysite{
+      color:#fed703;
+    }
+  }
+  &__social-link{
+    color: #fff;
+    transition: transform .4s ease-in-out;
+    &:hover{
+      transform: scale(1.2);
+    }
+    
+  }
+}

@@ -1,9 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { AppTypeInitialState } from '../../utils/types';
+import { pokemonTabs } from '../../utils/constants';
 
 const initialState: AppTypeInitialState = {
   toasts: [],
   userInfo: undefined,
+  currentPokemonTab: pokemonTabs.description,
 };
 
 export const appSlice = createSlice({
@@ -21,7 +23,11 @@ export const appSlice = createSlice({
     setUserStatus: (state, action) => {
       state.userInfo = action.payload;
     },
+    setPokemonTab: (state, action) => {
+      state.currentPokemonTab = action.payload;
+    },
   },
 });
 
-export const { setToast, clearToasts, setUserStatus } = appSlice.actions;
+export const { setToast, clearToasts, setUserStatus, setPokemonTab } =
+  appSlice.actions;

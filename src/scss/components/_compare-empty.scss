@@ -6,12 +6,14 @@
   gap: 2rem;
   height: 100%;
   &__btn{
+    padding: 2rem;
+    border-radius: 10rem;
     border: none;
     color: #fff;
-    background: none;
-    font-size: 5rem;
+    background-color: var(--accent-color);
     cursor: pointer;
-    svg{
+    svg{ 
+      font-size: 5rem;
       transition: transform .35s ease-in-out;
       &:hover{
         transform: rotate(90deg);

@@ -59,7 +59,7 @@
   mix-blend-mode: initial;
   pointer-events: none;
   transition: .5s ease-in-out;
-  background-color: #fff;
+  background-color: var(--accent-color);
   z-index: 0;
   &:nth-child(1){
     transition: calc(.5s * .8)  ease-in-out;

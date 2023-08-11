@@ -5,10 +5,11 @@ import { uuidv4 } from 'uuidv7';
 import { IoGitCompare } from 'react-icons/io5';
 import { FaPlus, FaTrash } from 'react-icons/fa';
 import { pokemonTypeInterface } from '../utils/types';
-import { addToCompare } from '../app/slices/pokemonSlice';
-import { setToast } from '../app/slices/appSlice';
+import { addToCompare, setCurrentPokemon } from '../app/slices/pokemonSlice';
+import { setPokemonTab, setToast } from '../app/slices/appSlice';
 import { addPokemonToList } from '../app/reducers/addPokemonToList';
 import { removePokemonFromUserList } from '../app/reducers/removePokemonFromUserList';
+import { pokemonTabs } from '../utils/constants';
 
 const PokemonCard = ({ pokemon }: any) => {
   const location = useLocation();
@@ -16,6 +17,8 @@ const PokemonCard = ({ pokemon }: any) => {
   const dispatch = useAppDispatch();
 
   const handleNavigate = () => {
+    dispatch(setPokemonTab(pokemonTabs.description));
+    dispatch(setCurrentPokemon(undefined));
     navigate(`/pokemon/${pokemon.id}`);
   };
 

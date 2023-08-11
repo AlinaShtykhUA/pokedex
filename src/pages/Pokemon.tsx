@@ -11,6 +11,7 @@ import {
 import { defaultImages, images } from '../utils/getPokemonImages';
 import Wrapper from '../sections/Wrapper';
 import { Description, Evolution, Catching, CapableMoves } from './index';
+import { setCurrentPokemon } from '../app/slices/pokemonSlice';
 
 const Pokemon = () => {
   const params = useParams();
@@ -88,32 +89,34 @@ const Pokemon = () => {
       const evolutionLevel = evolution.find(
         ({ pokemon }) => pokemon.name === data.name
       ).level;
-      console.log({
-        id: data.id,
-        name: data.name,
-        types: data.types.map(
-          ({ type: { name } }: { type: { name: string } }) => name
-        ),
-        image,
-        stats: data.stats.map(
-          ({
-            stat,
-            base_stat,
-          }: {
-            stat: { name: string };
-            base_stat: number;
-          }) => ({
-            name: stat.name,
-            value: base_stat,
-          })
-        ),
-        encounters,
-        evolutionLevel,
-        evolution,
-        pokemonAbilities,
-      });
+      dispatch(
+        setCurrentPokemon({
+          id: data.id,
+          name: data.name,
+          types: data.types.map(
+            ({ type: { name } }: { type: { name: string } }) => name
+          ),
+          image,
+          stats: data.stats.map(
+            ({
+              stat,
+              base_stat,
+            }: {
+              stat: { name: string };
+              base_stat: number;
+            }) => ({
+              name: stat.name,
+              value: base_stat,
+            })
+          ),
+          encounters,
+          evolutionLevel,
+          evolution,
+          pokemonAbilities,
+        })
+      );
     },
-    [getEvolutionData, params.id]
+    [getEvolutionData, params.id, dispatch]
   );
 
   useEffect(() => {

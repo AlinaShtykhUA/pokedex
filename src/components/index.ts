@@ -5,3 +5,5 @@ export { default as CompareContainer } from './CompareContainer';
 export { default as CompareEmpty } from './CompareContainer';
 export { default as CompareElement } from './CompareContainer';
 export { default as Login } from './Login';
+export { default as PokemonContainer } from './PokemonContainer';
+export { default as Info } from './Info';

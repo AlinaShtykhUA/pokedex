@@ -1,0 +1,47 @@
+.circle-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  &__outer{
+    height: 24rem;
+    width: 24rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .2rem solid var(--accent-color);
+    border-radius: 50%;
+    position: relative;
+  }
+}
+
+.outer{
+  &__inner-circle{
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .2rem solid var(--accent-color);
+    border-radius: 50%;
+  }
+  &__img{
+    height: 17rem;
+    max-inline-size: 100%;
+    box-sizing: auto;
+    z-index: 100;
+  }
+  &__lines{
+    display: flex;
+    gap: 3rem;
+    position: absolute;
+  }
+}
+
+.lines{
+  &__line{
+      width: 0.3rem;
+      height: 28rem;
+      background-color: var(--accent-color);
+      transform: rotate(45deg);
+    }
+}

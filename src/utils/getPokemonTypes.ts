@@ -37,7 +37,7 @@ const Rock = 'rock';
 const Steel = 'steel';
 const Water = 'water';
 
-export const pokemonTypes: pokemonTypeInterface = {
+export const pokemonTypes: pokemonTypeInterface | any = {
   bug: {
     image: bug,
     strength: [Grass, Psychic, Dark],

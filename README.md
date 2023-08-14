@@ -1,3 +1,9 @@
+
+
+
+https://github.com/AlinaShtykhUA/pokedex/assets/39155762/9e72911f-b864-4443-b2ef-abdd10d3c361
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
